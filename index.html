@@ -119,3 +119,25 @@
 </html></pre>
         </body>
     </html>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+  const tg = window.Telegram.WebApp;
+
+  // Tell Telegram your app is ready
+  tg.ready();
+
+  // Expand to full screen
+  tg.expand();
+
+  // Example: get user info
+  console.log(tg.initDataUnsafe);
+
+  // Change button color
+  tg.MainButton.setText("Submit");
+  tg.MainButton.show();
+
+  tg.MainButton.onClick(() => {
+    alert("Button clicked!");
+  });
+</script>
